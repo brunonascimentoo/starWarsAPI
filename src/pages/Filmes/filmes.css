@@ -3,9 +3,17 @@
   justify-content: center;
 }
 
-.filmes-name-position {
-  position: absolute;
-  top: 10px;
+.filmes {
+  display: flex;
+  justify-content: center;
+}
+
+.filmes-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-top: 100px;
 }
 
 .filmes-name h2 {

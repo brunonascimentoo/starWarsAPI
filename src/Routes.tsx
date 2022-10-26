@@ -4,9 +4,9 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
 import { Filmes } from "./pages/Filmes/Filmes";
 import { Home } from "./pages/Home/Home";
+import { People } from "./pages/People/People";
 
 export function Routes() {
   return (
@@ -17,6 +17,9 @@ export function Routes() {
         </Route>
         <Route path="/films">
           <Filmes />
+        </Route>
+        <Route path="/peoples">
+          <People />
         </Route>
       </Switch>
     </Router>

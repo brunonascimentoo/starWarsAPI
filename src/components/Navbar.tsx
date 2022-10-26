@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export function Navbar() {
@@ -6,22 +6,22 @@ export function Navbar() {
     <nav className="nav-container">
       <ul>
         <li>
-          <NavLink to="/films">FILMS</NavLink>
+          <Link to={"/films"}>films</Link>
         </li>
         <li>
-          <a>PEOPLE</a>
+          <Link to={"/peoples"}>people</Link>
         </li>
         <li>
-          <a>PLANETS</a>
+          <a>planets</a>
         </li>
         <li>
-          <a>SPECIES</a>
+          <a>species</a>
         </li>
         <li>
-          <a>STARTCHIPS</a>
+          <a>starships</a>
         </li>
         <li>
-          <a>VEHICLES</a>
+          <a>vehicles</a>
         </li>
       </ul>
     </nav>

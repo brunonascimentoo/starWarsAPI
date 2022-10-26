@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg";
-import { starRequest } from "../../types/starRequest";
+import { starRequest } from "../../types/starFilms";
 import { BASE_URL } from "../../utils/request";
 import { ArrowLeft } from "phosphor-react";
 import "./filmes.css";
@@ -36,7 +36,7 @@ export function Filmes() {
         </div>
       </div>
       <div className="Filmes">
-        <div>
+        <div className="filmes-content">
           <ul>
             {films.map((s, i) => (
               <li key={i}>{s.title}</li>
@@ -46,8 +46,8 @@ export function Filmes() {
       </div>
       <div className="buscar-filme">
         <div className="buscar-filme-position">
-          <Link to="/">
-            <button onClick={sagaFilme}>
+          <Link to={"/"}>
+            <button>
               <ArrowLeft size={32} />
             </button>
           </Link>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Copyright } from "./Copyright";
 import "./Bg.sass";
 
 export function Bg() {
@@ -11,7 +10,6 @@ export function Bg() {
         <div className="particle particle-3"></div>
         <div className="particle particle-4"></div>
       </div>
-      <Copyright />
     </div>
   );
 }

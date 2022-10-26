@@ -1,21 +1,16 @@
 import logo from "../../assets/images/logo.svg";
-import { Copyright } from "../../components/Copyright";
+import { Bg } from "../../components/Bg";
 import { Navbar } from "../../components/Navbar";
+import "./styles.css";
 
 export function Home() {
   return (
     <>
-      <div className="page-bg"></div>
+      <Bg />
       <Navbar />
       <div className="logo-star-container">
         <img src={logo} alt="" className="logo-star" />
-      </div>
-      <div className="animation-wrapper">
-        <div className="particle particle-1"></div>
-        <div className="particle particle-2"></div>
-        <div className="particle particle-3"></div>
-        <div className="particle particle-4"></div>
-        <Copyright />
+        <p className="copy-style">&copy; 2022 Copyright: Bruno Nascimento</p>
       </div>
     </>
   );

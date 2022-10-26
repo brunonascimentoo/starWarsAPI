@@ -18,6 +18,11 @@
 }
 
 .nav-container ul li {
-  color: #ffc50090;
+  letter-spacing: 3px;
   cursor: pointer;
+}
+
+.nav-container ul li:hover {
+  background-color: #f0f8ff10;
+  width: 95%;
 }
