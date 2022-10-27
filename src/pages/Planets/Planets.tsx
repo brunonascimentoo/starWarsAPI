@@ -14,6 +14,8 @@ export function Planets() {
   const [planets, setPlanets] = useState<starPlanetsRequest>();
   const [currentPage, setCurrentPage] = useState(1);
 
+  console.log(planets);
+
   useEffect(() => {
     request();
     previousPage();
@@ -21,7 +23,7 @@ export function Planets() {
   }, []);
 
   const request = async () => {
-    const res = await axios(`${BASE_URL}/people/?page=${currentPage}`);
+    const res = await axios(`${BASE_URL}/planets/?page=${currentPage}`);
     const data = await res.data;
     setPlanets(data);
   };

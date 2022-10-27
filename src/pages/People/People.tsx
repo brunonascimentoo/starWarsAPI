@@ -7,6 +7,7 @@ import { BASE_URL } from "../../utils/request";
 import logo from "../../assets/images/logo.svg";
 import "./styles.css";
 import { Link } from "react-router-dom";
+import { CaretLeft, CaretRight } from "phosphor-react";
 
 export function People() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,10 +59,14 @@ export function People() {
           })}
           <div className="btn">
             {peopleResult?.previous ? (
-              <button onClick={previousPage}>previous</button>
+              <button onClick={previousPage}>
+                <CaretLeft size={32} weight="fill" />
+              </button>
             ) : null}
             {peopleResult?.next ? (
-              <button onClick={nextPage}>next</button>
+              <button onClick={nextPage}>
+                <CaretRight size={32} weight="fill" />
+              </button>
             ) : null}
           </div>
         </div>
