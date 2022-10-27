@@ -36,41 +36,39 @@ export function People() {
   }
 
   return (
-    <>
+    <div className="container">
       <Bg />
-      <div className="container">
-        <div className="logo-position">
-          <Link to={"/"}>
-            <img src={logo} alt="" />
-          </Link>
-        </div>
-        <div className="main-container">
-          {peopleResult?.results.map((item, i) => {
-            return (
-              <ul key={i}>
-                <CardPeople
-                  name={item.name}
-                  mass={item.mass}
-                  height={item.height}
-                  gender={item.gender}
-                />
-              </ul>
-            );
-          })}
-          <div className="btn">
-            {peopleResult?.previous ? (
-              <button onClick={previousPage}>
-                <CaretLeft size={32} weight="fill" />
-              </button>
-            ) : null}
-            {peopleResult?.next ? (
-              <button onClick={nextPage}>
-                <CaretRight size={32} weight="fill" />
-              </button>
-            ) : null}
-          </div>
+      <div className="logo-position">
+        <Link to={"/"}>
+          <img src={logo} alt="" />
+        </Link>
+      </div>
+      <div className="main-container">
+        {peopleResult?.results.map((item, i) => {
+          return (
+            <ul className="card-container" key={i}>
+              <CardPeople
+                name={item.name}
+                mass={item.mass}
+                height={item.height}
+                gender={item.gender}
+              />
+            </ul>
+          );
+        })}
+        <div className="btn">
+          {peopleResult?.previous ? (
+            <button onClick={previousPage}>
+              <CaretLeft size={32} weight="fill" />
+            </button>
+          ) : null}
+          {peopleResult?.next ? (
+            <button onClick={nextPage}>
+              <CaretRight size={32} weight="fill" />
+            </button>
+          ) : null}
         </div>
       </div>
-    </>
+    </div>
   );
 }

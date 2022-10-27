@@ -12,8 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  margin-top: 100px;
+  padding: 10px;
+  margin-top: 80px;
 }
 
 .filmes-name h2 {
@@ -25,29 +25,23 @@
 .buscar-filme {
   display: flex;
   justify-content: center;
-}
-
-.buscar-filme-position {
-  position: absolute;
-  bottom: 35px;
+  padding-top: 80px;
 }
 
 .buscar-filme-position button {
-  border: 1px solid #ffc50090;
+  color: #f0f0ff;
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid #f0f8ff;
   border-radius: 4px;
   background: transparent;
-  padding: 0.425rem;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: "star", sans-serif;
-  color: #ffc500;
-  letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 .buscar-filme-position button:hover {
   transform: scale(1.2);
+  background-color: #ffc500;
 }
 
 ul {

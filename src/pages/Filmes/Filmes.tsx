@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg";
 import { starRequest } from "../../types/films/starFilms";
 import { BASE_URL } from "../../utils/request";
-import { ArrowLeft } from "phosphor-react";
+import { CaretLeft } from "phosphor-react";
 import "./filmes.css";
 import { Link } from "react-router-dom";
 
@@ -48,7 +48,7 @@ export function Filmes() {
         <div className="buscar-filme-position">
           <Link to={"/"}>
             <button>
-              <ArrowLeft size={32} />
+              <CaretLeft size={32} weight="fill" />
             </button>
           </Link>
         </div>

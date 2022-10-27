@@ -14,8 +14,6 @@ export function Planets() {
   const [planets, setPlanets] = useState<starPlanetsRequest>();
   const [currentPage, setCurrentPage] = useState(1);
 
-  console.log(planets);
-
   useEffect(() => {
     request();
     previousPage();
@@ -45,31 +43,33 @@ export function Planets() {
           <img src={logo} />
         </Link>
       </div>
-      {planets?.results.map((item, i) => {
-        return (
-          <div className="container" key={i}>
-            <div className="main-container">
-              <CardPlanets
-                name={item.name}
-                climate={item.climate}
-                gravity={item.gravity}
-                terrain={item.terrain}
-              />
+      <div className="main-container">
+        {planets?.results.map((item, i) => {
+          return (
+            <div key={i}>
+              <div className="card-container">
+                <CardPlanets
+                  name={item.name}
+                  climate={item.climate}
+                  gravity={item.gravity}
+                  terrain={item.terrain}
+                />
+              </div>
             </div>
-          </div>
-        );
-      })}
-      <div className="btn">
-        {planets?.previous ? (
-          <button onClick={previousPage}>
-            <CaretLeft size={32} weight="fill" />
-          </button>
-        ) : null}
-        {planets?.next ? (
-          <button onClick={nextPage}>
-            <CaretRight size={32} weight="fill" />
-          </button>
-        ) : null}
+          );
+        })}
+        <div className="btn">
+          {planets?.previous ? (
+            <button onClick={previousPage}>
+              <CaretLeft size={32} weight="fill" />
+            </button>
+          ) : null}
+          {planets?.next ? (
+            <button onClick={nextPage}>
+              <CaretRight size={32} weight="fill" />
+            </button>
+          ) : null}
+        </div>
       </div>
     </div>
   );
