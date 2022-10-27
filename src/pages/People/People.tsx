@@ -1,9 +1,8 @@
-import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg";
 import { CardPeople } from "../../components/CardPeople";
-import { starPeopleResults } from "../../types/starPeopleResults";
+import { starPeopleResults } from "../../types/people/starPeopleResults";
 import { BASE_URL } from "../../utils/request";
 import logo from "../../assets/images/logo.svg";
 import "./styles.css";
@@ -15,6 +14,8 @@ export function People() {
 
   useEffect(() => {
     getPeople();
+    previousPage();
+    nextPage();
   }, []);
 
   const getPeople = async () => {
@@ -43,14 +44,16 @@ export function People() {
           </Link>
         </div>
         <div className="main-container">
-          {peopleResult?.results.map((item) => {
+          {peopleResult?.results.map((item, i) => {
             return (
-              <CardPeople
-                name={item.name}
-                mass={item.mass}
-                height={item.height}
-                gender={item.gender}
-              />
+              <ul key={i}>
+                <CardPeople
+                  name={item.name}
+                  mass={item.mass}
+                  height={item.height}
+                  gender={item.gender}
+                />
+              </ul>
             );
           })}
           <div className="btn">

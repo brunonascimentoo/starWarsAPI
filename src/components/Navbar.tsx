@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export function Navbar() {
@@ -6,13 +6,13 @@ export function Navbar() {
     <nav className="nav-container">
       <ul>
         <li>
-          <Link to={"/films"}>films</Link>
+          <NavLink to={"/films"}>films</NavLink>
         </li>
         <li>
-          <Link to={"/peoples"}>people</Link>
+          <NavLink to={"/peoples"}>people</NavLink>
         </li>
         <li>
-          <a>planets</a>
+          <NavLink to={"/planets"}>planets</NavLink>
         </li>
         <li>
           <a>species</a>

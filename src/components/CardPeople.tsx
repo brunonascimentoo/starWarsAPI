@@ -1,13 +1,13 @@
-import { starPeople } from "../types/starPeople";
+import { starPeople } from "../types/people/starPeople";
 import "./CardPeople.css";
 
 export function CardPeople(props: starPeople) {
   return (
-    <div className="card-container">
-      <h3 className="item currentItem">name: {props.name}</h3>
-      <h4 className="item ">Mass: {props.mass}</h4>
-      <h4 className="item ">Gender: {props.gender}</h4>
-      <h4 className="item ">Height: {props.height}</h4>
-    </div>
+    <ul className="card-container">
+      <li className="item currentItem">name: {props.name}</li>
+      <li className="item ">Mass: {props.mass}</li>
+      <li className="item ">Gender: {props.gender}</li>
+      <li className="item ">Height: {props.height}</li>
+    </ul>
   );
 }

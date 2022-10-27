@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg";
-import { starRequest } from "../../types/starFilms";
+import { starRequest } from "../../types/films/starFilms";
 import { BASE_URL } from "../../utils/request";
 import { ArrowLeft } from "phosphor-react";
 import "./filmes.css";

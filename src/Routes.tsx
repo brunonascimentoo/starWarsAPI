@@ -1,27 +1,26 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { Filmes } from "./pages/Filmes/Filmes";
 import { Home } from "./pages/Home/Home";
 import { People } from "./pages/People/People";
+import { Planets } from "./pages/Planets/Planets";
 
 export function Routes() {
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
-        <Route path="/" exact>
+        <Route path={"/"} exact>
           <Home />
         </Route>
-        <Route path="/films">
+        <Route path={"/films"}>
           <Filmes />
         </Route>
-        <Route path="/peoples">
+        <Route path={"/peoples"}>
           <People />
         </Route>
+        <Route path={"/planets"}>
+          <Planets />
+        </Route>
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 }
