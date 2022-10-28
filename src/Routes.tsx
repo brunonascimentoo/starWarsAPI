@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { Especies } from "./pages/Especies/Especies";
 import { Filmes } from "./pages/Filmes/Filmes";
 import { Home } from "./pages/Home/Home";
 import { People } from "./pages/People/People";
@@ -19,6 +20,9 @@ export function Routes() {
         </Route>
         <Route path={"/planets"}>
           <Planets />
+        </Route>
+        <Route path={"/especies"}>
+          <Especies />
         </Route>
       </Switch>
     </BrowserRouter>
