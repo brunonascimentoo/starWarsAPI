@@ -4,7 +4,6 @@ import { Bg } from "../../components/Bg/Bg";
 import { CardPeople } from "../../components/CardPeople/CardPeople";
 import { starPeopleResults } from "../../types/people/starPeopleResults";
 import { BASE_URL } from "../../utils/request";
-import "./styles.css";
 import { Link } from "react-router-dom";
 import { CaretLeft, CaretRight } from "phosphor-react";
 import { Logo } from "../../components/Logo/Logo";
@@ -44,14 +43,14 @@ export function People() {
       <div className="main-container">
         {people?.results.map((item, i) => {
           return (
-            <ul className="card-container" key={i}>
+            <div className="card-container" key={i}>
               <CardPeople
                 name={item.name}
                 mass={item.mass}
                 height={item.height}
                 gender={item.gender}
               />
-            </ul>
+            </div>
           );
         })}
         <div className="btn">

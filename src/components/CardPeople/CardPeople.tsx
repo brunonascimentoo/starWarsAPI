@@ -1,5 +1,4 @@
 import { starPeople } from "../../types/people/starPeople";
-import "./CardPeople.css";
 
 export function CardPeople(props: starPeople) {
   return (

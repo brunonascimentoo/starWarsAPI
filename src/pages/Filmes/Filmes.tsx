@@ -17,28 +17,21 @@ export function Filmes() {
   }, []);
 
   return (
-    <div>
+    <div className="container-main">
       <Bg />
       <div className="logo-position">
         <Link to={"/"}>
           <Logo />
         </Link>
       </div>
-      <div className="filmes-name">
-        <div className="filmes-name-position">
-          <h2>Films</h2>
-        </div>
-      </div>
-      <div className="Filmes">
-        <div className="filmes-content">
-          <ul>
-            {films.map((film, i) => (
-              <div key={i}>
-                <li>{film.title}</li>
-              </div>
-            ))}
-          </ul>
-        </div>
+      <div className="main-container">
+        {films.map((film, i) => {
+          return (
+            <div key={i} className="card-container">
+              {film.title}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

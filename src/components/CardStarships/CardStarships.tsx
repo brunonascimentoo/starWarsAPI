@@ -2,7 +2,7 @@ import { Starships } from "../../types/starships/Starships";
 
 export function CardStarships(props: Starships) {
   return (
-    <ul className="ul-card">
+    <ul className="card-container">
       <li>name: {props.name}</li>
       <li>model: {props.model}</li>
       <li>manufacturer: {props.manufacturer}</li>

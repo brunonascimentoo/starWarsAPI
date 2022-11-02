@@ -2,7 +2,7 @@ import { Vehicles } from "../../types/Vehicles/Vehicles";
 
 export function CardVehicles(props: Vehicles) {
   return (
-    <ul className="ul-card">
+    <ul className="card-container">
       <li>name: {props.name}</li>
       <li>model: {props.model}</li>
       <li>manufacturer: {props.manufacturer}</li>
