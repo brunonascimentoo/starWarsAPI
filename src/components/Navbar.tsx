@@ -18,7 +18,7 @@ export function Navbar() {
           <NavLink to={"/species"}>species</NavLink>
         </li>
         <li>
-          <a>starships</a>
+          <NavLink to={"/starships"}>starships</NavLink>
         </li>
         <li>
           <NavLink to={"/vehicles"}>vehicles</NavLink>

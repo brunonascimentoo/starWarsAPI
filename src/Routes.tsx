@@ -5,6 +5,7 @@ import { Home } from "./pages/Home/Home";
 import { People } from "./pages/People/People";
 import { Planets } from "./pages/Planets/Planets";
 import { Vehicles } from "./pages/Vehicles/Vehicles";
+import { Starships } from "./pages/Starships/Starships";
 
 export function Routes() {
   return (
@@ -24,6 +25,9 @@ export function Routes() {
         </Route>
         <Route path={"/species"}>
           <Species />
+        </Route>
+        <Route path={"/starships"}>
+          <Starships />
         </Route>
         <Route path={"/vehicles"}>
           <Vehicles />
