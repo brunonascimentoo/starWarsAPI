@@ -21,7 +21,7 @@ export function Filmes() {
       <Bg />
       <div className="filmes-name">
         <div className="filmes-name-position">
-          <h2>Saga</h2>
+          <h2>Films</h2>
         </div>
       </div>
       <div className="Filmes">
