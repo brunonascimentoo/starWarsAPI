@@ -23,6 +23,10 @@ a:visited {
   color: #ffc500;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .main-container {
   font-size: 1rem;
   padding: 10px;
@@ -64,7 +68,25 @@ a:visited {
   background-color: #ffc500;
 }
 
+@media (min-width: 375px) {
+  .nav-container {
+    margin-top: 50px;
+  }
+  .nav-container li {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 414px) {
+  .nav-container li {
+    font-size: 1.8rem;
+  }
+}
+
 @media (min-width: 576px) {
+  .nav-container li {
+    font-size: 1.9rem;
+  }
+
   .logo-position img {
     width: 150px;
   }
@@ -78,9 +100,15 @@ a:visited {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 820px) {
   .nav-container li {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-container li {
+    font-size: 2.2rem;
   }
 
   .logo-position img {
@@ -104,5 +132,11 @@ a:visited {
 
   .btn button {
     width: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-container li {
+    font-size: 2.5rem;
   }
 }
