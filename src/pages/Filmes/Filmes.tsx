@@ -6,6 +6,7 @@ import { BASE_URL } from "../../utils/request";
 import { CaretLeft } from "phosphor-react";
 import "./filmes.css";
 import { Link } from "react-router-dom";
+import { Logo } from "../../components/Logo/Logo";
 
 export function Filmes() {
   const [films, setFilms] = useState<starRequest[]>([]);
@@ -19,6 +20,11 @@ export function Filmes() {
   return (
     <div>
       <Bg />
+      <div className="logo-position">
+        <Link to={"/"}>
+          <Logo />
+        </Link>
+      </div>
       <div className="filmes-name">
         <div className="filmes-name-position">
           <h2>Films</h2>

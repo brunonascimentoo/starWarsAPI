@@ -2,13 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg";
 import { CardPlanets } from "../../components/CardPlanets/CardPlanets";
-import { starPlanets } from "../../types/planets/starPlanets";
 import { BASE_URL } from "../../utils/request";
 import { CaretLeft, CaretRight } from "phosphor-react";
-import logo from "../../assets/images/logo.svg";
 import "./styles.css";
 import { starPlanetsRequest } from "../../types/planets/starPlanetsResults";
 import { Link } from "react-router-dom";
+import { Logo } from "../../components/Logo/Logo";
 
 export function Planets() {
   const [planets, setPlanets] = useState<starPlanetsRequest>();
@@ -39,7 +38,7 @@ export function Planets() {
       <Bg />
       <div className="logo-position">
         <Link to={"/"}>
-          <img src={logo} />
+          <Logo />
         </Link>
       </div>
       <div className="main-container">

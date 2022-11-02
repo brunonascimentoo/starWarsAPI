@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg";
 import { CardSpecies } from "../../components/CardSpecies/CardSpecies";
 import { StarSpeciesResults } from "../../types/species/StarSpeciesResults";
-import logo from "../../assets/images/logo.svg";
 import { BASE_URL } from "../../utils/request";
 import { CaretLeft, CaretRight } from "phosphor-react";
 import { Link } from "react-router-dom";
+import { Logo } from "../../components/Logo/Logo";
 
 export function Species() {
   const [species, setSpecies] = useState<StarSpeciesResults>();
@@ -37,7 +37,7 @@ export function Species() {
       <Bg />
       <div className="logo-position">
         <Link to={"/"}>
-          <img src={logo} alt="" />
+          <Logo />
         </Link>
       </div>
       <div className="main-container">

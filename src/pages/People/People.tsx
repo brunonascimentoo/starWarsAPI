@@ -8,6 +8,7 @@ import logo from "../../assets/images/logo.svg";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import { CaretLeft, CaretRight } from "phosphor-react";
+import { Logo } from "../../components/Logo/Logo";
 
 export function People() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,7 +39,7 @@ export function People() {
       <Bg />
       <div className="logo-position">
         <Link to={"/"}>
-          <img src={logo} alt="" />
+          <Logo />
         </Link>
       </div>
       <div className="main-container">
