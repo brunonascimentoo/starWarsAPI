@@ -1,21 +1,20 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg";
-import { CardPeople } from "../../components/CardPeople";
-import { starPeopleResults } from "../../types/people/starPeopleResults";
-import { BASE_URL } from "../../utils/request";
+import { CardSpecies } from "../../components/CardSpecies/CardSpecies";
+import { StarSpeciesResults } from "../../types/species/StarSpeciesResults";
 import logo from "../../assets/images/logo.svg";
-import "./styles.css";
-import { Link } from "react-router-dom";
+import { BASE_URL } from "../../utils/request";
 import { CaretLeft, CaretRight } from "phosphor-react";
+import { Link } from "react-router-dom";
 
-export function People() {
+export function Species() {
+  const [species, setSpecies] = useState<StarSpeciesResults>();
   const [currentPage, setCurrentPage] = useState(1);
-  const [peopleResult, setPeople] = useState<starPeopleResults>();
 
   useEffect(() => {
-    axios(`${BASE_URL}/people/?page=${currentPage}`).then((response) => {
-      setPeople(response.data);
+    axios(`${BASE_URL}/species/?page=${currentPage}`).then((response) => {
+      setSpecies(response.data);
     });
   }, [currentPage]);
 
@@ -27,9 +26,9 @@ export function People() {
     setCurrentPage(currentPage + 1);
   }
 
-  if (currentPage < 1) {
+  if (currentPage == 0) {
     setCurrentPage(currentPage + 1);
-  } else if (currentPage > 9) {
+  } else if (currentPage == 5) {
     setCurrentPage(currentPage - 1);
   }
 
@@ -42,25 +41,27 @@ export function People() {
         </Link>
       </div>
       <div className="main-container">
-        {peopleResult?.results.map((item, i) => {
+        {species?.results.map((item, i) => {
           return (
-            <ul className="card-container" key={i}>
-              <CardPeople
+            <div key={i} className="card-container">
+              <CardSpecies
                 name={item.name}
-                mass={item.mass}
-                height={item.height}
-                gender={item.gender}
+                language={item.language}
+                classification={item.classification}
+                eye_colors={item.eye_colors}
+                hair_colors={item.hair_colors}
+                skin_colors={item.skin_colors}
               />
-            </ul>
+            </div>
           );
         })}
         <div className="btn">
-          {peopleResult?.previous ? (
+          {species?.previous ? (
             <button onClick={previousPage}>
               <CaretLeft size={32} weight="fill" />
             </button>
           ) : null}
-          {peopleResult?.next ? (
+          {species?.next ? (
             <button onClick={nextPage}>
               <CaretRight size={32} weight="fill" />
             </button>

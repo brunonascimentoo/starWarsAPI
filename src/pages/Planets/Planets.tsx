@@ -7,7 +7,7 @@ import { BASE_URL } from "../../utils/request";
 import { CaretLeft, CaretRight } from "phosphor-react";
 import logo from "../../assets/images/logo.svg";
 import "./styles.css";
-import { starPlanetsRequest } from "../../types/planets/starPlanetsRequest";
+import { starPlanetsRequest } from "../../types/planets/starPlanetsResults";
 import { Link } from "react-router-dom";
 
 export function Planets() {
@@ -15,24 +15,23 @@ export function Planets() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    request();
-    previousPage();
-    nextPage();
-  }, []);
-
-  const request = async () => {
-    const res = await axios(`${BASE_URL}/planets/?page=${currentPage}`);
-    const data = await res.data;
-    setPlanets(data);
-  };
+    axios(`${BASE_URL}/planets/?page=${currentPage}`).then((response) => {
+      setPlanets(response.data);
+    });
+  }, [currentPage]);
 
   function previousPage() {
     setCurrentPage(currentPage - 1);
-    request();
   }
+
   function nextPage() {
     setCurrentPage(currentPage + 1);
-    request();
+  }
+
+  if (currentPage == 0) {
+    setCurrentPage(currentPage + 1);
+  } else if (currentPage == 7) {
+    setCurrentPage(currentPage - 1);
   }
 
   return (

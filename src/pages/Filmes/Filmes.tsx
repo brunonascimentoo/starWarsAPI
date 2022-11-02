@@ -9,23 +9,12 @@ import { Link } from "react-router-dom";
 
 export function Filmes() {
   const [films, setFilms] = useState<starRequest[]>([]);
-  useEffect(() => {
-    sagaFilme();
-  }, []);
 
-  const sagaFilme = async () => {
-    const response = await axios(`${BASE_URL}/films/`).then((res) => {
-      const data = res.data.results.map((obj: starRequest) => {
-        return obj;
-      });
-      setFilms(
-        data.filter((item: starRequest) => {
-          return item.title;
-        })
-      );
+  useEffect(() => {
+    axios(`${BASE_URL}/films/`).then((response) => {
+      setFilms(response.data.results);
     });
-    return response;
-  };
+  }, []);
 
   return (
     <div>
@@ -38,8 +27,10 @@ export function Filmes() {
       <div className="Filmes">
         <div className="filmes-content">
           <ul>
-            {films.map((s, i) => (
-              <li key={i}>{s.title}</li>
+            {films.map((film, i) => (
+              <div key={i}>
+                <li>{film.title}</li>
+              </div>
             ))}
           </ul>
         </div>

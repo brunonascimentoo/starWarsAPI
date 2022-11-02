@@ -15,7 +15,7 @@ export function Navbar() {
           <NavLink to={"/planets"}>planets</NavLink>
         </li>
         <li>
-          <NavLink to={"/especies"}>species</NavLink>
+          <NavLink to={"/species"}>species</NavLink>
         </li>
         <li>
           <a>starships</a>
