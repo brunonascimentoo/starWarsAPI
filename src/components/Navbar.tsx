@@ -21,7 +21,7 @@ export function Navbar() {
           <a>starships</a>
         </li>
         <li>
-          <a>vehicles</a>
+          <NavLink to={"/vehicles"}>vehicles</NavLink>
         </li>
       </ul>
     </nav>

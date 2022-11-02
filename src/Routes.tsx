@@ -4,6 +4,7 @@ import { Filmes } from "./pages/Filmes/Filmes";
 import { Home } from "./pages/Home/Home";
 import { People } from "./pages/People/People";
 import { Planets } from "./pages/Planets/Planets";
+import { Vehicles } from "./pages/Vehicles/Vehicles";
 
 export function Routes() {
   return (
@@ -23,6 +24,9 @@ export function Routes() {
         </Route>
         <Route path={"/species"}>
           <Species />
+        </Route>
+        <Route path={"/vehicles"}>
+          <Vehicles />
         </Route>
       </Switch>
     </BrowserRouter>
