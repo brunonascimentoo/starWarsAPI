@@ -11,7 +11,7 @@ import { CaretLeft, CaretRight } from "phosphor-react";
 
 export function People() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [peopleResult, setPeople] = useState<starPeopleResults>();
+  const [people, setPeople] = useState<starPeopleResults>();
 
   useEffect(() => {
     axios(`${BASE_URL}/people/?page=${currentPage}`).then((response) => {
@@ -42,7 +42,7 @@ export function People() {
         </Link>
       </div>
       <div className="main-container">
-        {peopleResult?.results.map((item, i) => {
+        {people?.results.map((item, i) => {
           return (
             <ul className="card-container" key={i}>
               <CardPeople
@@ -55,12 +55,12 @@ export function People() {
           );
         })}
         <div className="btn">
-          {peopleResult?.previous ? (
+          {people?.previous ? (
             <button onClick={previousPage}>
               <CaretLeft size={32} weight="fill" />
             </button>
           ) : null}
-          {peopleResult?.next ? (
+          {people?.next ? (
             <button onClick={nextPage}>
               <CaretRight size={32} weight="fill" />
             </button>
