@@ -1,10 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Bg } from "../../components/Bg";
-import { CardPeople } from "../../components/CardPeople";
+import { Bg } from "../../components/Bg/Bg";
+import { CardPeople } from "../../components/CardPeople/CardPeople";
 import { starPeopleResults } from "../../types/people/starPeopleResults";
 import { BASE_URL } from "../../utils/request";
-import logo from "../../assets/images/logo.svg";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import { CaretLeft, CaretRight } from "phosphor-react";

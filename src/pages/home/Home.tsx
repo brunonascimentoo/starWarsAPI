@@ -1,7 +1,6 @@
-import logo from "../../assets/images/logo.svg";
-import { Bg } from "../../components/Bg";
+import { Bg } from "../../components/Bg/Bg";
 import { Logo } from "../../components/Logo/Logo";
-import { Navbar } from "../../components/Navbar";
+import { Navbar } from "../../components/Navbar/Navbar";
 import "./styles.css";
 
 export function Home() {

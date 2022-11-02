@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Bg } from "../../components/Bg";
+import { Bg } from "../../components/Bg/Bg";
 import { CardStarships } from "../../components/CardStarships/CardStarships";
 import { StarshipResults } from "../../types/starships/StarshipResults";
 import { BASE_URL } from "../../utils/request";

@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Bg } from "../../components/Bg";
+import { Bg } from "../../components/Bg/Bg";
 import { starRequest } from "../../types/films/starFilms";
 import { BASE_URL } from "../../utils/request";
-import { CaretLeft } from "phosphor-react";
 import "./filmes.css";
 import { Link } from "react-router-dom";
 import { Logo } from "../../components/Logo/Logo";
@@ -39,15 +38,6 @@ export function Filmes() {
               </div>
             ))}
           </ul>
-        </div>
-      </div>
-      <div className="buscar-filme">
-        <div className="buscar-filme-position">
-          <Link to={"/"}>
-            <button>
-              <CaretLeft size={32} weight="fill" />
-            </button>
-          </Link>
         </div>
       </div>
     </div>
