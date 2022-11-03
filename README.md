@@ -31,6 +31,8 @@ git clone https://github.com/brunonascimentoo/starWarsAPI.git
 
 ### Observação, você precisa ter o node instalado!!!
 
+[🔗 Clique aqui para acessar](https://star-wars-swapi-bruno.vercel.app/)
+
 # Contato
 
 - bnascimento1996@gmail.com ❤
