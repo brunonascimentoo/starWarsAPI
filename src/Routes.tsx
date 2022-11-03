@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Species } from "./pages/Species/Species";
 import { Filmes } from "./pages/Filmes/Filmes";
-import { Home } from "./pages/Home/Home";
+import { Home } from "./pages/home/Home";
 import { People } from "./pages/People/People";
 import { Planets } from "./pages/Planets/Planets";
 import { Vehicles } from "./pages/Vehicles/Vehicles";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Bg.sass";
 
 export function Bg() {
