@@ -1,6 +1,6 @@
 .logo-star-container {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -12,6 +12,31 @@
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   color: #ffc500;
+}
+
+.icon-container {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.icon-container p {
+  margin-top: 12px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons a:nth-child(1) {
+  color: #0a66c2;
+}
+.icons a:nth-child(2) {
+  color: #000;
 }
 
 @media (max-height: 375px) {
