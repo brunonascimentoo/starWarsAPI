@@ -94,7 +94,7 @@ ul {
 
 @media (min-width: 992px) {
   .nav-container li {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .logo-position img {
@@ -108,9 +108,6 @@ ul {
   .card-container {
     align-items: center;
   }
-  .card-container li {
-    font-size: 2rem;
-  }
 
   .btn {
     padding-top: 10px;
@@ -123,6 +120,10 @@ ul {
 
 @media (min-width: 1200px) {
   .nav-container li {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .icon-container {
+    padding: 80px;
   }
 }
