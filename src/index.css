@@ -69,22 +69,14 @@ ul {
 }
 
 @media (min-width: 375px) {
-  .nav-container {
-    margin-top: 50px;
-  }
   .nav-container li {
-    font-size: 1.7rem;
-  }
-}
-@media (min-width: 414px) {
-  .nav-container li {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 576px) {
   .nav-container li {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 
   .logo-position img {
@@ -100,19 +92,13 @@ ul {
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 992px) {
   .nav-container li {
     font-size: 2rem;
   }
-}
-
-@media (min-width: 992px) {
-  .nav-container li {
-    font-size: 2.2rem;
-  }
 
   .logo-position img {
-    width: 250px;
+    width: 200px;
   }
 
   .main-container {
@@ -137,6 +123,6 @@ ul {
 
 @media (min-width: 1200px) {
   .nav-container li {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
