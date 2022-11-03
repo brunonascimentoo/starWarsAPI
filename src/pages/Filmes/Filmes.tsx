@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg/Bg";
 import { starRequest } from "../../types/films/starFilms";
-import { BASE_URL } from "../../utils/request";
+import { url } from "../../utils/request";
 import { Link } from "react-router-dom";
 import { Logo } from "../../components/Logo/Logo";
 
@@ -10,7 +10,7 @@ export function Filmes() {
   const [films, setFilms] = useState<starRequest[]>([]);
 
   useEffect(() => {
-    axios(`${BASE_URL}/films/`).then((response) => {
+    axios(`${url}/films/`).then((response) => {
       setFilms(response.data.results);
     });
   }, []);

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg/Bg";
 import { CardSpecies } from "../../components/CardSpecies/CardSpecies";
 import { StarSpeciesResults } from "../../types/species/StarSpeciesResults";
-import { BASE_URL } from "../../utils/request";
+import { url } from "../../utils/request";
 import { CaretLeft, CaretRight } from "phosphor-react";
 import { Link } from "react-router-dom";
 import { Logo } from "../../components/Logo/Logo";
@@ -13,7 +13,7 @@ export function Species() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    axios(`${BASE_URL}/species/?page=${currentPage}`).then((response) => {
+    axios(`${url}/species/?page=${currentPage}`).then((response) => {
       setSpecies(response.data);
     });
   }, [currentPage]);

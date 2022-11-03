@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg/Bg";
 import { CardPeople } from "../../components/CardPeople/CardPeople";
 import { starPeopleResults } from "../../types/people/starPeopleResults";
-import { BASE_URL } from "../../utils/request";
+import { url } from "../../utils/request";
 import { Link } from "react-router-dom";
 import { CaretLeft, CaretRight } from "phosphor-react";
 import { Logo } from "../../components/Logo/Logo";
@@ -13,7 +13,7 @@ export function People() {
   const [people, setPeople] = useState<starPeopleResults>();
 
   useEffect(() => {
-    axios(`${BASE_URL}/people/?page=${currentPage}`).then((response) => {
+    axios(`${url}/people/?page=${currentPage}`).then((response) => {
       setPeople(response.data);
     });
   }, [currentPage]);

@@ -6,14 +6,14 @@ import { Bg } from "../../components/Bg/Bg";
 import { CardVehicles } from "../../components/CardVehicles/CardVehicles";
 import { Logo } from "../../components/Logo/Logo";
 import { VehiclesResult } from "../../types/Vehicles/VehiclesResults";
-import { BASE_URL } from "../../utils/request";
+import { url } from "../../utils/request";
 
 export function Vehicles() {
   const [vehicles, setVehicles] = useState<VehiclesResult>();
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    axios(`${BASE_URL}/vehicles/?page=${currentPage}`).then((response) => {
+    axios(`${url}/vehicles/?page=${currentPage}`).then((response) => {
       setVehicles(response.data);
     });
   }, [currentPage]);

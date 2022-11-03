@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Bg } from "../../components/Bg/Bg";
 import { CardStarships } from "../../components/CardStarships/CardStarships";
 import { StarshipResults } from "../../types/starships/StarshipResults";
-import { BASE_URL } from "../../utils/request";
+import { url } from "../../utils/request";
 import { Link } from "react-router-dom";
 import { CaretLeft, CaretRight } from "phosphor-react";
 import { Logo } from "../../components/Logo/Logo";
@@ -13,7 +13,7 @@ export function Starships() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    axios(`${BASE_URL}/starships?page=${currentPage}`).then((response) => {
+    axios(`${url}/starships?page=${currentPage}`).then((response) => {
       setStarships(response.data);
     });
   }, [currentPage]);

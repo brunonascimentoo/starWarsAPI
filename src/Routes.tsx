@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Species } from "./pages/Species/Species";
 import { Filmes } from "./pages/Filmes/Filmes";
 import { Home } from "./pages/Home/Home";

@@ -1,4 +1,4 @@
-# Login Screen
+# Star Wars API
 
 ![preview](./.github/background.png)
 
