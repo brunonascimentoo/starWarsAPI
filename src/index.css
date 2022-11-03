@@ -126,4 +126,9 @@ ul {
   .icon-container {
     padding: 80px;
   }
+
+  .main-container {
+    width: 50%;
+    margin: auto;
+  }
 }
